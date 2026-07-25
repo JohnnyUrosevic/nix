@@ -7,6 +7,7 @@ let
     "cloud" = 8009;
     "read" = 5000;
     "listen" = 5001;
+    "photos" = 2283;
   };
   privateServices = {
     "radarr" = 7878;

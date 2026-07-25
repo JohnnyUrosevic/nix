@@ -10,6 +10,7 @@
     ./nextcloud.nix
     ./books.nix
     ./tailscale.nix
+    ./photos.nix
     ./secrets/sops.nix
   ];
 }
