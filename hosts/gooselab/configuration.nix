@@ -58,6 +58,7 @@
 
   programs.ssh.startAgent = true;
   services.openssh.enable = true;
+  environment.enableAllTerminfo = true;
 
   services.openssh.extraConfig = ''
     UseDNS no
