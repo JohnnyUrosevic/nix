@@ -24,8 +24,4 @@ in
     source = create_symlink "${dotfiles}/${subpath}";
     recursive = true;
   }) configs;
-
-  programs.zsh.shellAliases = {
-    build = "sudo nixos-rebuild switch --impure --flake=/home/goose/gooselab/";
-  };
 }

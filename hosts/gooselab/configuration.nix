@@ -72,11 +72,11 @@
 
   networking.enableIPv6 = false;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+
+  #TODO: move this to home.nix after I start using nix to configure zshrc
+  programs.zsh.shellAliases = {
+    build = "sudo nixos-rebuild switch --impure --flake=/home/goose/gooselab/";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
