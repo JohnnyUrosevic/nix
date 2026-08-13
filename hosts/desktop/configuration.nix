@@ -5,10 +5,11 @@
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
     ../../features
+    ../../features/niri.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "desktop";
 
@@ -52,9 +53,10 @@
   fonts.enableDefaultPackages = true;
 
   #TODO move this to ssh.nix
-  programs.ssh.startAgent = true;
-  services.openssh.enable = true;
-  environment.enableAllTerminfo = true;
+  services.desktopManager.gnome.enable = false;
+  #programs.ssh.startAgent = true;
+  #services.openssh.enable = true;
+  #environment.enableAllTerminfo = true;
 
   boot.kernel.sysctl = {
     "net.ipv6.conf.all.forwarding" = 1;
