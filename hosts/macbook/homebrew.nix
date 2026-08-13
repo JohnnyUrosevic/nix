@@ -12,6 +12,7 @@
     "spotify"
     "obsidian"
     "godot"
+    "iina"
 
     {
       name = "private-internet-access";
