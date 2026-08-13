@@ -9,11 +9,6 @@ let
 in
 
 {
-
-  imports = [
-    ../../features/niri.nix
-  ];
-
   home.username = "goose";
   home.homeDirectory = "/home/goose";
   home.stateVersion = "25.05";
