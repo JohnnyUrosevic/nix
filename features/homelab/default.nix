@@ -10,5 +10,6 @@
     ./tailscale.nix
     ./photos.nix
     ./secrets/sops.nix
+    ./minecraft
   ];
 }

@@ -1,0 +1,142 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                                                                     #
+#                                           PasswordWhitelist Configuration                                           #
+#                                                                                                                     #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# A little QoL field to define preset colors. This can also contain style tags.
+colors:
+  primary: <#fa8b34>
+  secondary: <#b5b5b5>
+  error: <#f08989>
+
+# Another QoL field for defining preset text. The values are pasted into the result text literally, meaning
+# no tags are closed by default.
+tags:
+  prefix: <b><primary>PW</b> <b><dark_gray>•</b>
+  header_top: <dark_gray><!shadow><strikethrough>                                    </strikethrough>[ </!shadow><b><primary>PW</b><!shadow> ]<strikethrough>                                    </strikethrough></!shadow></dark_gray>
+  header_bottom: <dark_gray><!shadow><strikethrough>                                                                                </strikethrough></dark_gray>
+  bullet: <b><dark_gray>•</b>
+  sep: <dark_gray>—</dark_gray><secondary>
+
+# The message for '/passwordwhitelist reload'
+reload: <prefix> <secondary>Successfully reloaded <primary><config></primary>.
+
+# The message for '/passwordwhitelist enable'
+enable: <prefix> <secondary>Successfully <primary>enabled</primary> the password whitelist.
+
+# The message for '/passwordwhitelist disable'
+disable: <prefix> <secondary>Successfully <primary>disabled</primary> the password whitelist.
+
+# The message for '/passwordwhitelist password set <password>'
+set: <prefix> <secondary>Successfully set the new password to <primary><password></primary>.
+
+# The message for '/passwordwhitelist password show'
+show: <prefix> <secondary>The password is currently set to <primary><password></primary>.
+
+# The message for '/passwordwhitelist attempts reset <player>'
+reset-attempts: <prefix> <secondary>Successfully reset the attempts for <primary><player></primary>.
+
+
+# The disconnect message for an incorrect password
+password-incorrect: <error>Incorrect password.
+
+# The disconnect message for a self-triggered disconnect
+disconnect: <error>You have disconnected.
+
+# Various messages which show up as help
+help:
+  # /passwordwhitelist
+  # /passwordwhitelist help
+  main: |-
+    <header_top><primary>
+     <bullet> /passwordwhitelist help <sep> Show this message</secondary>
+     <bullet> /passwordwhitelist reload [<file>] <sep> Reload plugin files</secondary> 
+     <bullet> /passwordwhitelist enable <sep> Enable the password whitelist</secondary>
+     <bullet> /passwordwhitelist disable <sep> Disable the password whitelist</secondary>
+     <bullet> /passwordwhitelist password set <password> <sep> Set a new password</secondary>
+     <bullet> /passwordwhitelist password show <sep> Show the current password</secondary>
+    </primary><header_bottom>
+
+  # /passwordwhitelist help reload
+  reload: |-
+    <header_top><primary>
+       Help for /passwordwhitelist <b>reload [<file>]</b>
+       <bullet> <secondary>Command used to reload some file(s) from disk.</secondary>
+    
+       Example usages:
+       <bullet> <secondary>/passwordwhitelist reload</secondary> <dark_gray>—</dark_gray> <secondary>Reload all files</secondary>
+       <bullet> <secondary>/passwordwhitelist reload</secondary> all <dark_gray>—</dark_gray> <secondary>Reload all files</secondary>
+       <bullet> <secondary>/passwordwhitelist reload</secondary> messages.yml <dark_gray>—</dark_gray> <secondary>Reload the messages.yml file</secondary>
+    </primary><header_bottom>
+
+  # /passwordwhitelist help enable
+  enable: |-
+    <header_top><primary>
+       Help for /passwordwhitelist <b>enable</b>
+       <bullet> <secondary>Command used to enable the password whitelist. Players who attempt to connect will have to enter the defined password. The command will not run successfully if no password is set, so make sure to set one beforehand using </secondary>/passwordwhitelist password set <password><secondary>.</secondary>
+    
+       Example usage:
+       <bullet> <secondary>/passwordwhitelist enable</secondary>
+    
+       Tips:
+       <bullet> <secondary>If you want this command to also kick all online players, you can enable that behavior by editing the </secondary>config.yml<secondary> config file.
+    </primary><header_bottom>
+
+  # /passwordwhitelist help disable
+  disable: |-
+    <header_top><primary>
+       Help for /passwordwhitelist <b>disable</b>
+       <bullet> <secondary>Command used to disable the password whitelist.</secondary>
+    
+       Example usage:
+       <bullet> <secondary>/passwordwhitelist disable</secondary>
+    </primary><header_bottom>
+
+  # /passwordwhitelist help password
+  # /passwordwhitelist password
+  password: |-
+    <header_top><primary>
+       Help for /passwordwhitelist <b>password <set | show></b>
+       <bullet> <secondary>Command used to manage the current password.</secondary>
+    
+       Example usages:
+       <bullet> <secondary>/passwordwhitelist password </secondary>set newpassword789
+       <bullet> <secondary>/passwordwhitelist password </secondary>show
+    
+       Tips:
+       <bullet> <secondary>If you cannot see any subcommands, it is likely that you are </secondary>missing the required permissions<secondary>. Make sure to give yourself either </secondary>passwordwhitelist.command.password.set<secondary> or </secondary>passwordwhitelist.command.password.show<secondary> with a permissions plugin like LuckPerms.
+    </primary><header_bottom>
+
+  # /passwordwhitelist password set
+  password-set: |-
+    <header_top><primary>
+       Help for /passwordwhitelist password <b>set <password></b>
+       <bullet> <secondary>Command used to set a new password. The new password may have any length, may contain whitespace, and can even contain unicode characters.</secondary>
+    
+       Example usages:
+       <bullet> <secondary>/passwordwhitelist password set </secondary>my cool password
+       <bullet> <secondary>/passwordwhitelist password set </secondary>admin123
+       <bullet> <secondary>/passwordwhitelist password set </secondary>かみちゃん
+    </primary><header_bottom>
+
+  # /passwordwhitelist help attempts
+  # /passwordwhitelist attempts
+  attempts: |-
+    <header_top><primary>
+       Help for /passwordwhitelist <b>attempts <reset></b>
+       <bullet> <secondary>Command used to manage a player's password attempt count.</secondary>
+    
+       Example usages:
+       <bullet> <secondary>/passwordwhitelist attempts </secondary>reset Strokkur24
+    </primary><header_bottom>
+
+  # /passwordwhitelist attempts reset
+  attempts-reset: |-
+    <header_top><primary>
+       Help for /passwordwhitelist attempts <b>reset <player></b>
+       <bullet> <secondary>Command used to reset a player's attempt count.</secondary>
+    
+       Example usages:
+       <bullet> <secondary>/passwordwhitelist attempts </secondary>reset Strokkur42
+    </primary><header_bottom>
