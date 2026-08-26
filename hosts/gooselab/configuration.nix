@@ -77,7 +77,7 @@
 
   #TODO: move this to home.nix after I start using nix to configure zshrc
   programs.zsh.shellAliases = {
-    build = "sudo nixos-rebuild switch --impure --flake=path:/home/goose/gooselab/";
+    build = "sudo nixos-rebuild switch --impure --flake=path:/home/goose/nix/";
   };
 
   # This value determines the NixOS release from which the default

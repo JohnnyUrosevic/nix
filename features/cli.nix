@@ -10,7 +10,7 @@
     ripgrep
     gcc
     nodejs
-    nil
+    nixd
     nixpkgs-fmt
 
     cowsay

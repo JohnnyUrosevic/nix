@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  dotfiles = "${config.home.homeDirectory}/gooselab/dotfiles/.config";
+  dotfiles = "${config.home.homeDirectory}/nix/dotfiles/.config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     nvim = "nvim";
