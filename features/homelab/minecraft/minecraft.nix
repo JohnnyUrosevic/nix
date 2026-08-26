@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }:
 
@@ -56,4 +57,9 @@
   networking.firewall.allowedUDPPorts = [
     19132
   ];
+
+  # Nix rebuilds will often restart the server without changes in here. If you update this you have to restart the server manually
+  systemd.services.minecraft-server-gonse = {
+    restartIfChanged = lib.mkForce false;
+  };
 }
