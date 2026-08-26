@@ -27,7 +27,7 @@ in
   programs.zsh = {
     enable = true;
     shellAliases = {
-      build = "sudo darwin-rebuild switch --flake /Users/goose/gooselab/";
+      build = "sudo darwin-rebuild switch --flake path:/Users/goose/gooselab/";
     };
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -7,6 +7,8 @@
     ../../features
     ../../features/homelab
   ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -75,7 +77,7 @@
 
   #TODO: move this to home.nix after I start using nix to configure zshrc
   programs.zsh.shellAliases = {
-    build = "sudo nixos-rebuild switch --impure --flake=/home/goose/gooselab/";
+    build = "sudo nixos-rebuild switch --impure --flake=path:/home/goose/gooselab/";
   };
 
   # This value determines the NixOS release from which the default
