@@ -2,8 +2,7 @@
 
 {
   imports = [
-    # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
     ../../features
     ../../features/homelab
   ];
@@ -77,7 +76,7 @@
 
   #TODO: move this to home.nix after I start using nix to configure zshrc
   programs.zsh.shellAliases = {
-    build = "sudo nixos-rebuild switch --impure --flake=path:/home/goose/nix/";
+    build = "sudo nixos-rebuild switch --flake=path:/home/goose/nix/";
   };
 
   # This value determines the NixOS release from which the default
