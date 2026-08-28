@@ -44,6 +44,15 @@
     ];
     shell = pkgs.zsh;
   };
+
+  users.users.yabo = {
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+    ];
+    shell = pkgs.zsh;
+  };
+
   users.defaultUserShell = pkgs.zsh;
 
   nixpkgs.config.allowUnfree = true;
