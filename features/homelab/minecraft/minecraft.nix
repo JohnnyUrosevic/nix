@@ -20,7 +20,7 @@
 
         serverProperties = {
           gamemode = "survival";
-          difficulty = "hard";
+          difficulty = "medium";
           motd = "Gonse's Minecraft server!";
           white-list = false;
           max-players = 50;
