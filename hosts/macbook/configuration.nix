@@ -33,7 +33,7 @@
     remapCapsLockToEscape = true;
   };
 
-  system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
+  system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = true;
   system.defaults.NSGlobalDomain.NSAutomaticQuoteSubstitutionEnabled = false;
   system.defaults.NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
   system.defaults.NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
