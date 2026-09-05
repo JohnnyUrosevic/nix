@@ -12,6 +12,7 @@
     nodejs
     nixd
     nixpkgs-fmt
+    tree-sitter
 
     cowsay
     fortune-kind
