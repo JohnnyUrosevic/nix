@@ -14,6 +14,7 @@
       "obsidian"
       "godot"
       "iina"
+      "utm"
 
       {
         name = "private-internet-access";
