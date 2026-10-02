@@ -25,9 +25,11 @@
     image = "qmcgaw/gluetun";
     environment = {
       "OPENVPN_USER" = "p3881393";
-      "SERVER_REGIONS" = "US California";
+      "SERVER_REGIONS" = "US West Streaming Optimized";
       "VPN_SERVICE_PROVIDER" = "private internet access";
       "VPN_TYPE" = "openvpn";
+      "OPENVPN_PROTOCOL" = "tcp";
+      "OPENVPN_TARGET_PORT"= "443";
     };
     environmentFiles = [ /run/secrets/openvpn/password ];
     volumes = [
@@ -43,6 +45,8 @@
       "49420:49420/udp"
       "6882:6882/tcp"
       "6882:6882/udp"
+      "9191:9191/tcp" #dispatcharr
+      "9191:9191/udp" #dispatcharr
     ];
     log-driver = "journald";
     extraOptions = [

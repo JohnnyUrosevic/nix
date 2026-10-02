@@ -11,5 +11,6 @@
     ./photos.nix
     ./secrets/sops.nix
     ./minecraft
+    ./tv.nix
   ];
 }
