@@ -1,4 +1,5 @@
 {
+  lib,
   ...
 }:
 
@@ -15,9 +16,11 @@
     serviceConfig = {
       ReadWritePaths = [
         "/mnt/data/downloads"
+        "/var/lib/sabnzbd/complete"
         "/mnt/data/books"
         "/mnt/data/audiobooks"
       ];
+      UMask = lib.mkForce "0022"; 
     };
   };
 
