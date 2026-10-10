@@ -16,7 +16,7 @@
     servers = {
       gonse = {
         enable = true;
-        package = pkgs.paperServers.paper-26_2;
+        package = pkgs.paperServers.paper-26_3;
 
         serverProperties = {
           gamemode = "survival";
@@ -38,11 +38,11 @@
           "plugins/PasswordWhitelist/data" = ./plugins/PasswordWhitelist/data;
           "plugins/Geyser-Spigot.jar" = pkgs.fetchurl {
             url = "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot";
-            hash = "sha256-t1S7JXl2VJVTI5voLEsajKl7rJl8h5n97loooofn/aY=";
+            hash = "sha256-b+0tlxHi2zw2VQjsENs20GoBmavSJhWdI9V/gmYv16Y=";
           };
           "plugins/floodgate-spigot.jar" = pkgs.fetchurl {
             url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot";
-            hash = "sha256-n0NsQv/YsQkaQ316Thb4IYG51TFPixcy36nVpP/7Gf4=";
+            hash = "sha256-IVcK/5zhfWmDko6FUnd3YOHt5QUAJrBMaGsK4RLm/X4=";
           };
         };
       };
