@@ -13,5 +13,7 @@
     ./minecraft
     ./monitoring.nix
     ./tv.nix
+    ./soulseek.nix
+    ./music.nix
   ];
 }

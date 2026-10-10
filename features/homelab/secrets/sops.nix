@@ -17,4 +17,5 @@
   sops.secrets."nextcloud/password" = { };
   sops.secrets."kavita/tokenKey" = { };
   sops.secrets."caddy/environment" = { };
+  sops.secrets."soulseek/environment" = { };
 }

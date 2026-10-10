@@ -29,7 +29,11 @@
       "VPN_SERVICE_PROVIDER" = "private internet access";
       "VPN_TYPE" = "openvpn";
       "OPENVPN_PROTOCOL" = "tcp";
-      "OPENVPN_TARGET_PORT"= "443";
+      "OPENVPN_TARGET_PORT" = "443";
+      # "VPN_PORT_FORWARDING" = "on";
+      "GLUETUN_HTTP_CONTROL_SERVER_ENABLE" = "on";
+      "HTTP_CONTROL_SERVER_ADDRESS" = "0.0.0.0:8000";
+      "HTTP_CONTROL_SERVER_AUTH_DEFAULT_ROLE" = "{\"auth\":\"apikey\",\"apikey\":\"deadbeef\"}";
     };
     environmentFiles = [ /run/secrets/openvpn/password ];
     volumes = [
@@ -47,6 +51,9 @@
       "6882:6882/udp"
       "9191:9191/tcp" #dispatcharr
       "9191:9191/udp" #dispatcharr
+      "5030:5030/tcp" #soulseek
+      "8000:8000/tcp"
+      "8000:8000/udp"
     ];
     log-driver = "journald";
     extraOptions = [

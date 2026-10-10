@@ -8,6 +8,7 @@ let
     "read" = 5000;
     "listen" = 5001;
     "photos" = 2283;
+    "music" = 4533;
   };
   privateServices = {
     "radarr" = 7878;
@@ -17,6 +18,7 @@ let
     "torrent" = 7979;
     "usenet" = 8080;
     "library" = 8084;
+    "soulseek" = 5030;
   };
 in
 {
