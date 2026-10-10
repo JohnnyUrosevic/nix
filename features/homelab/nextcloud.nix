@@ -30,7 +30,7 @@
     https = true;
     settings.overwriteprotocol = "https";
 
-    maxUploadSize = "128G";
+    maxUploadSize = "1024G";
     extraOptions = {
       max_chunk_size = "1073741824";
     };
@@ -38,8 +38,8 @@
     nginx.enableFastcgiRequestBuffering = false;
 
     phpOptions = {
-      "upload_max_filesize" = "128G";
-      "post_max_size" = "128G";
+      "upload_max_filesize" = "1024G";
+      "post_max_size" = "1024G";
       "max_execution_time" = "3600";
     };
 
