@@ -38,7 +38,7 @@
           "plugins/PasswordWhitelist/data" = ./plugins/PasswordWhitelist/data;
           "plugins/Geyser-Spigot.jar" = pkgs.fetchurl {
             url = "https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot";
-            hash = "sha256-b+0tlxHi2zw2VQjsENs20GoBmavSJhWdI9V/gmYv16Y=";
+            hash = "sha256-xhcgu+pxSnBNm3ai8emnrJEnHkgQHsdFzNZo/alRQBU=";
           };
           "plugins/floodgate-spigot.jar" = pkgs.fetchurl {
             url = "https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot";
