@@ -28,5 +28,7 @@
     sops
 
     tmux
+
+    nh
   ];
 }

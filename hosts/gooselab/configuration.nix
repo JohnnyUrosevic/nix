@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -85,7 +85,7 @@
 
   #TODO: move this to home.nix after I start using nix to configure zshrc
   programs.zsh.shellAliases = {
-    build = "sudo nixos-rebuild switch --flake=path:/home/goose/nix/ --impure";
+    build = "sudo nh os switch path:/home/goose/nix/ --impure --bypass-root-check";
   };
 
   system.stateVersion = "25.11"; # Did you read the comment?
